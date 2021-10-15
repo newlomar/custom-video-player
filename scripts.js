@@ -25,7 +25,12 @@ function alterVideoStatus() {
 function alterVolume() {
 
   video.volume = Number(volumeBar.value);
-  console.log(video.volume)
+
+}
+
+function alterSpeed() {
+
+  video.playbackRate = Number(speedBar.value)
 
 }
 
@@ -33,4 +38,5 @@ function alterVolume() {
 
 video.addEventListener('click', alterVideoStatus)
 playButton.addEventListener('click', alterVideoStatus)
-volumeBar.addEventListener('change', alterVolume)
+volumeBar.addEventListener('click', alterVolume)
+speedBar.addEventListener('click', alterSpeed)
