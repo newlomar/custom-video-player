@@ -13,12 +13,19 @@ const skipPlus25 = document.querySelector("[data-skip='25']");
 function alterVideoStatus() {
 
   if (video.paused) {
-    video.play()
+    video.play();
   }
 
   else {
-    video.pause()
+    video.pause();
   }
+
+}
+
+function alterVolume() {
+
+  video.volume = Number(volumeBar.value);
+  console.log(video.volume)
 
 }
 
@@ -26,3 +33,4 @@ function alterVideoStatus() {
 
 video.addEventListener('click', alterVideoStatus)
 playButton.addEventListener('click', alterVideoStatus)
+volumeBar.addEventListener('change', alterVolume)
