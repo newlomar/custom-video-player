@@ -46,12 +46,27 @@ function updateProgressBar() {
 
 }
 
+function returnTenSeconds() {
+  
+  video.currentTime -= 10;
+  updateProgressBar();
+
+}
+
+function forwardTwentyfiveSeconds() {
+
+  video.currentTime += 25
+  updateProgressBar();
+}
+
 /* Conectar com os events Listeners */
 
 
-video.addEventListener('click', alterVideoStatus)
-playButton.addEventListener('click', alterVideoStatus)
-volumeBar.addEventListener('click', alterVideoVolume)
-speedBar.addEventListener('click', alterVideoSpeed)
+video.addEventListener('click', alterVideoStatus);
+playButton.addEventListener('click', alterVideoStatus);
+volumeBar.addEventListener('click', alterVideoVolume);
+speedBar.addEventListener('click', alterVideoSpeed);
+skipLess10.addEventListener('click', returnTenSeconds);
+skipPlus25.addEventListener('click', forwardTwentyfiveSeconds);
 
-setInterval(updateProgressBar, 1000)
+setInterval(updateProgressBar, 1000);
