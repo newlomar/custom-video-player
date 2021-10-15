@@ -40,6 +40,7 @@ body {
 
 .player__video {
   width: 100%;
+  cursor: pointer;
 }
 
 .player__button {
