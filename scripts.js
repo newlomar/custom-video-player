@@ -22,21 +22,34 @@ function alterVideoStatus() {
 
 }
 
-function alterVolume() {
+function alterVideoVolume() {
 
   video.volume = Number(volumeBar.value);
 
 }
 
-function alterSpeed() {
+function alterVideoSpeed() {
 
   video.playbackRate = Number(speedBar.value)
 
 }
 
+function alterVideoProgress() {
+
+}
+
+function updateProgressBar() {
+
+  progressBar.style.flexBasis = `${(video.currentTime / video.duration) * 100}%`;
+
+}
+
 /* Conectar com os events Listeners */
+
 
 video.addEventListener('click', alterVideoStatus)
 playButton.addEventListener('click', alterVideoStatus)
-volumeBar.addEventListener('click', alterVolume)
-speedBar.addEventListener('click', alterSpeed)
+volumeBar.addEventListener('click', alterVideoVolume)
+speedBar.addEventListener('click', alterVideoSpeed)
+
+setInterval(updateProgressBar, 1000)
