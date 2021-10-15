@@ -14,10 +14,12 @@ function alterVideoStatus() {
 
   if (video.paused) {
     video.play();
+    playButton.textContent = '| |'
   }
 
   else {
     video.pause();
+    playButton.textContent = '►'
   }
 
 }
