@@ -11,4 +11,4 @@
   - Retornanar 10 segundos do vídeo;
   - Avançar 25 segundos do vídeo;
 
-####
+#### Link para acessar o Video Player: https://app.netlify.com/sites/dreamy-wiles-1b8d76/overview
